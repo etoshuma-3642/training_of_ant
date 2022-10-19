@@ -11,6 +11,7 @@ services:
       - "3000:3000"
     tty: true
     stdin_open: true
+    working_dir: /frontend
     command: sh -c 'yarn start'
 volumes:
   front_node_modules:

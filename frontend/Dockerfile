@@ -6,8 +6,13 @@ ENV LANG=C.UTF-8
 ENV TZ=Asia/Tokyo
 # # 時間を東京に指定
 
-WORKDIR ../frontend
+WORKDIR /frontend
+COPY ./package.json /package.json 
+COPY ./yarn.lock /yarn.lock
 
 RUN yarn install
-RUN npm install react-scripts
+
+COPY . .
+
+
 
