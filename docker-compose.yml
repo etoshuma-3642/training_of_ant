@@ -3,14 +3,14 @@ version: "3.8"
 services:
   frontend:
     container_name: frontend_eto
-    build: .
-    environment:
-      context: .
-      dockerfile: ./Dockerfile
+    build: ./frontend
     volumes:
       - ./frontend:/frontend
-    command: sh -c 'cd frontend && yarn start'
+      - front_node_modules:/frontend/node_modules
     ports:
       - "3000:3000"
     tty: true
     stdin_open: true
+    command: sh -c 'yarn start'
+volumes:
+  front_node_modules:
