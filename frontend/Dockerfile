@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:18.0.0
 # ベースイメージ
 
 ENV LANG=C.UTF-8
@@ -7,12 +7,7 @@ ENV TZ=Asia/Tokyo
 # # 時間を東京に指定
 
 WORKDIR /frontend
-COPY ./package.json /package.json 
-COPY ./yarn.lock /yarn.lock
-
-RUN yarn install
 
 COPY . .
 
-
-
+RUN yarn install
