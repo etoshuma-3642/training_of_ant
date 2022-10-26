@@ -11,3 +11,4 @@ WORKDIR /frontend
 COPY . .
 
 RUN yarn install
+RUN yarn add dart-sass
