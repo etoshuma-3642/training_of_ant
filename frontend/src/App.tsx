@@ -1,4 +1,5 @@
 import './App.css';
+import CommonTxt from './component/CommonTxt';
 import ModalBtn from './component/ModalBtn';
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
       <ModalBtn genre="task" />
       <ModalBtn genre="addTask" />
       <ModalBtn genre="charaDescription" />
+      <CommonTxt>テキストコンポーネント</CommonTxt>
     </div>
   );
 }
