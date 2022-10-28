@@ -1,4 +1,7 @@
 import React from "react";
+import AddTaskModal from "./Modal/ AddTaskModal";
+import TaskModal from "./Modal/ TaskModal";
+import CharaDescriptionModal from "./Modal/CharaDescriptionModal";
 import HelpModal from "./Modal/HelpModal";
 
 interface Props {
@@ -16,8 +19,14 @@ const ModalBtn: React.VFC<Props> = ({genre}) => {
     switch (genre) {
       case "help":
         return <HelpModal />;
+      case "task":
+        return <TaskModal />;
+      case "addTask":
+        return <AddTaskModal />;
+      case "charaDescription":
+        return <CharaDescriptionModal />;
       default:
-        return <p>ヘルプじゃないよー</p>;
+        return <p>じゃないよー</p>;
     }
   }
 
