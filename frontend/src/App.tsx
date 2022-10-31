@@ -1,4 +1,4 @@
-import './App.css';
+import './assets/scss/styles.scss';
 import ModalBtn from './component/ModalBtn';
 
 function App() {

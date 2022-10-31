@@ -1,4 +1,5 @@
 import React from "react";
+import Btn from "./Common/Btn";
 import AddTaskModal from "./Modal/ AddTaskModal";
 import TaskModal from "./Modal/ TaskModal";
 import CharaDescriptionModal from "./Modal/CharaDescriptionModal";
@@ -32,8 +33,8 @@ const ModalBtn: React.VFC<Props> = ({genre}) => {
 
   return(
     <>
-      <p className="modalBtn" onClick={clickKcBtn}>{genre}コンポーネント</p>
-      <div className={`${isOpen ? 'modal--open' : 'modal--close'}`}>
+      <Btn openModal={clickKcBtn} genre={genre} />
+      <div className={`modal ${isOpen ? 'modal--open' : 'modal--close'}`}>
         <SwitchModalContent />
       </div>
     </>
