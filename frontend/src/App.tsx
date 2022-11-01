@@ -1,16 +1,27 @@
 import './assets/scss/styles.scss';
 import CommonTitle from './component/CommonTitle';
 import ModalBtn from './component/ModalBtn';
+import CommonTxt from './component/CommonTxt';
 
 function App() {
   return (
-    <div className="App">
-      <CommonTitle>タイトルコンポーネント</CommonTitle>
-      <ModalBtn genre="help" />
-      <ModalBtn genre="task" />
-      <ModalBtn genre="addTask" />
-      <ModalBtn genre="charaDescription" />
-      <CommonTxt>テキストコンポーネント</CommonTxt>
+    <div className="globalContainer">
+      <div className="container">
+        <CommonTitle>タイトルコンポーネント</CommonTitle>
+        <div className="moduleArea _help">
+          <ModalBtn genre="help" />
+        </div>
+        <div className="moduleArea _chara">
+          <ModalBtn genre="charaDescription" />
+        </div>
+        <div className="moduleArea _task">
+          <ModalBtn genre="task" />
+        </div>
+        <div className="moduleArea _addTask">
+          <ModalBtn genre="addTask" />
+        </div>
+        <CommonTxt>テキストコンポーネント</CommonTxt>
+      </div>
     </div>
   );
 }
