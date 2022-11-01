@@ -10,6 +10,7 @@ function App() {
       <ModalBtn genre="task" />
       <ModalBtn genre="addTask" />
       <ModalBtn genre="charaDescription" />
+      <CommonTxt>テキストコンポーネント</CommonTxt>
     </div>
   );
 }
