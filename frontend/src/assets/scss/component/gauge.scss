@@ -1,0 +1,28 @@
+@import "../_variables.scss";
+
+.gagebar{
+    border: 1px solid $COLOR_QUATERNARY;
+    background: #999;
+    width: 200px;
+    margin: 10px 0;
+}
+.gage{
+    height: 10px;
+    background: $COLOR_PRIMARY;
+    &--zero {
+        width: 0%;
+    }
+    
+    &--twenty-five {
+        width: 25%;
+    }
+    &--fifty {
+        width: 50%;
+    }
+    &--seventy-five {
+        width: 75%;
+    }
+    &--one-hundred {
+        width: 100%;
+    }
+}

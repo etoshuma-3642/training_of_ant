@@ -1,6 +1,8 @@
+import CommonTxt from './component/CommonTxt';
 import './assets/scss/styles.scss';
 import CommonTitle from './component/CommonTitle';
 import ModalBtn from './component/ModalBtn';
+import Gauge from './component/ Motivationgauge';
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
       <ModalBtn genre="addTask" />
       <ModalBtn genre="charaDescription" />
       <CommonTxt>テキストコンポーネント</CommonTxt>
+      <Gauge />
     </div>
   );
 }
