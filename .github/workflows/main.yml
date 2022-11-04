@@ -15,7 +15,7 @@ jobs:
       -
         name: Gen build file
         run: |
-          docker exec -it frontend_eto yarn build
+          docker-compose run --rm frontend yarn build
       -
         name: Deploy to GitHub Pages
         if: success()
