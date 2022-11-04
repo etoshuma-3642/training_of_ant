@@ -1,0 +1,20 @@
+name: website
+
+on:
+  push:
+    branches:
+      - add_deploy_setting
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+        name: Deploy to GitHub Pages
+        run: | 
+          docker exec -it frontend_eto yarn build
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: gh-pages
+          build_dir: frontend/build
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
