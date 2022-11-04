@@ -3,7 +3,7 @@ name: website
 on:
   push:
     branches:
-      - add_deploy_setting
+      - develop
 
 jobs:
   publish:
