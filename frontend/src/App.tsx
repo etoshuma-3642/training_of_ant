@@ -1,5 +1,6 @@
 import './assets/scss/styles.scss';
 import CommonTitle from './component/CommonTitle';
+import CommonTxt from './component/CommonTxt';
 import ModalBtn from './component/ModalBtn';
 
 function App() {
