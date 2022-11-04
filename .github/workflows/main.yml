@@ -9,6 +9,7 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+      -
         name: Deploy to GitHub Pages
         run: | 
           docker exec -it frontend_eto yarn build
