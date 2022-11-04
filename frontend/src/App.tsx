@@ -1,8 +1,8 @@
-import CommonTxt from './component/CommonTxt';
 import './assets/scss/styles.scss';
 import CommonTitle from './component/CommonTitle';
 import ModalBtn from './component/ModalBtn';
 import Gauge from './component/ Motivationgauge';
+import CommonTxt from './component/CommonTxt';
 
 function App() {
   return (
