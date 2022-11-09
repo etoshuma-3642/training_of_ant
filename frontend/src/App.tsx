@@ -17,10 +17,10 @@ function App() {
         </div>
         <ModalBtn genre="help" />
         <ModalBtn genre="charaDescription" />
+        <Gauge />
         <ModalBtn genre="task" />
         <ModalBtn genre="addTask" />
       </div>
-      <Gauge />
     </div>
   );
 }
