@@ -1,5 +1,6 @@
 {
   "name": "frontend",
+  "homepage": "https://mem-kage.github.io/training_of_ant/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
