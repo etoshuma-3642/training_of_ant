@@ -13,7 +13,7 @@ const ModalBtn: React.VFC<Props> = ({genre}) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const clickKcBtn = () => {
-    setIsOpen(!isOpen)
+    setIsOpen(prevState => !prevState)
   }
 
   const SwitchModalContent = () => {
@@ -32,12 +32,12 @@ const ModalBtn: React.VFC<Props> = ({genre}) => {
   }
 
   return(
-    <>
+    <div className={`moduleArea moduleArea--${genre}`}>
       <Btn openModal={clickKcBtn} genre={genre} />
       <div className={`modal ${isOpen ? 'modal--open' : 'modal--close'}`}>
         <SwitchModalContent />
       </div>
-    </>
+    </div>
   )
 }
 
