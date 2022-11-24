@@ -9,7 +9,14 @@ const Task: React.VFC= () => {
     const [task, setTask] = useState('');
 
     //入力値をtextに反映
-    const handleChange = (e: { target: { value: any; }; }) => setTask(e.target.value);
+    const handleChange = (e: { target: { value: any; }; }) => {
+        if(e.target.value.length<30){
+            setTask(e.target.value);
+        }
+        else{
+            alert("タスクの文字列は30文字以内で入力してください")
+        }
+    }
 
     // Enter押下時、ToDoに追加
     const handleEnter = (e: { key: string; }) => {

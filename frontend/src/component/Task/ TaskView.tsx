@@ -5,12 +5,12 @@ interface Props {
 }
 
 
-const TaskModal: React.VFC<Props> = (props) => {
+const TaskModal: React.VFC<Props> = (todoArray) => {
 
   return(
     <div className="task--view">
         {
-        props.array.map((value) => 
+        todoArray.array.map((value) => 
         <p>{value}</p>)
         }
     </div>
