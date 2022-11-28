@@ -1,7 +1,5 @@
 import React from "react";
 import Btn from "./Common/Btn";
-import AddTaskModal from "./Modal/ AddTaskModal";
-import TaskModal from "./Modal/ TaskModal";
 import CharaDescriptionModal from "./Modal/CharaDescriptionModal";
 import HelpModal from "./Modal/HelpModal";
 
@@ -13,17 +11,13 @@ const ModalBtn: React.VFC<Props> = ({genre}) => {
   const [isOpen, setIsOpen] = React.useState(false);
 
   const clickKcBtn = () => {
-    setIsOpen(!isOpen)
+    setIsOpen(prevState => !prevState)
   }
 
   const SwitchModalContent = () => {
     switch (genre) {
       case "help":
         return <HelpModal />;
-      case "task":
-        return <TaskModal />;
-      case "addTask":
-        return <AddTaskModal />;
       case "charaDescription":
         return <CharaDescriptionModal />;
       default:
@@ -32,12 +26,12 @@ const ModalBtn: React.VFC<Props> = ({genre}) => {
   }
 
   return(
-    <>
+    <div className={`moduleArea moduleArea--${genre}`}>
       <Btn openModal={clickKcBtn} genre={genre} />
       <div className={`modal ${isOpen ? 'modal--open' : 'modal--close'}`}>
         <SwitchModalContent />
       </div>
-    </>
+    </div>
   )
 }
 

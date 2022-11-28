@@ -12,27 +12,42 @@
 }
 .container {
   position: relative;
-  max-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 1200px;
   height: 100vh;
   width: 100%;
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .moduleArea {
   position: absolute;
-  &._help {
+  &--help {
     top: 0;
     left: 0;
   }
-  &._chara {
+  &--charaDescription {
     top: 0;
     right: 0;
   }
-  &._task {
-    bottom: clamp(80px, 10vh, 20px);
-    left: 0;
+}
+.task{
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  &--add{
+    height: 30px;
   }
-  &._addTask {
-    bottom: 0;
-    right: 0;
+  &--view{
+    width: 240px;
+    height: 200px;
+    background-image: url(../images/signboard.png);
+    background-size: cover;
+    overflow: scroll;
   }
 }
 // Tablet(portrait) ~
