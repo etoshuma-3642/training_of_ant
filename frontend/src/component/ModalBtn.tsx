@@ -1,7 +1,5 @@
 import React from "react";
 import Btn from "./Common/Btn";
-import AddTaskModal from "./Modal/ AddTaskModal";
-import TaskModal from "./Modal/ TaskModal";
 import CharaDescriptionModal from "./Modal/CharaDescriptionModal";
 import HelpModal from "./Modal/HelpModal";
 
@@ -20,10 +18,6 @@ const ModalBtn: React.VFC<Props> = ({genre}) => {
     switch (genre) {
       case "help":
         return <HelpModal />;
-      case "task":
-        return <TaskModal />;
-      case "addTask":
-        return <AddTaskModal />;
       case "charaDescription":
         return <CharaDescriptionModal />;
       default:

@@ -5,6 +5,7 @@ import CommonTitle from './component/CommonTitle';
 import CommonTxt from './component/CommonTxt';
 import Ant from './component/Ant';
 import ModalBtn from './component/ModalBtn';
+import Task from './component/Task';
 
 function App() {
   return (
@@ -17,8 +18,7 @@ function App() {
         </div>
         <ModalBtn genre="help" />
         <ModalBtn genre="charaDescription" />
-        <ModalBtn genre="task" />
-        <ModalBtn genre="addTask" />
+        <Task />
       </div>
     </div>
   );
