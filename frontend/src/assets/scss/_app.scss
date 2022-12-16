@@ -49,6 +49,9 @@
     background-size: cover;
     overflow: scroll;
   }
+  &__list--view{
+    display: flex;
+  }
 }
 // Tablet(portrait) ~
 @include mixin.mediaQuery(tb){

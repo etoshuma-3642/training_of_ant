@@ -1,12 +1,33 @@
 import React,{useState} from "react";
-import TaskModal from "./Task/ TaskView";
+import TaskView from "./Task/ TaskView";
 
-const todolist = ['a','b'];
+const todoRandomlist = [
+    'スクワット3回',
+    '大きく深呼吸10回',
+    'その場で足踏み10回',
+    '"生麦生米生卵"を噛まずに3回"',
+    'ちょっと贅沢',
+    'コーヒーブレイク',
+    '好きな音楽を聴く',
+    '仮眠をとる',
+    '甘いものを食べる',
+    '雑談をする',
+    '整理整頓をする',
+    'ストレッチをする',
+    'いい香りを嗅ぐ',
+];
 
-const Task: React.VFC= () => {
+const Task: React.FC= () => {
+    const [task, setTask] = useState('');
+    const [todolist,setTodolist] = useState(todoRandomlist);
+    
+    const clickCallback = (index: number) => {
+        const newTodos = [...todolist]
+        newTodos.splice(index,1)
+        setTodolist(newTodos)
+	};
 
     // stateを作成
-    const [task, setTask] = useState('');
 
     //入力値をtextに反映
     const handleChange = (e: { target: { value: any; }; }) => {
@@ -24,14 +45,17 @@ const Task: React.VFC= () => {
         // 入力値が空白文字の場合終了
         if (!task.match(/\S/g) ) return;
         // ToDoAppクラスの「handleAdd」関数を実行
-        todolist.push(task);
-        setTask('');
+        // const randomTask = todoRandomlist[Math.floor(Math.random() * todoRandomlist.length)];
+        console.log(todolist.length)
+        // setTodolist([...todolist,randomTask])
+        setTodolist([...todolist, task])
+        setTask('')
     }
     };
 
 return(
     <div className="task">
-        <TaskModal array={todolist} />
+        <TaskView todoArray={todolist} clickCallback={clickCallback}/>
         <input
             className="task--add"
             type="text"
